@@ -1,4 +1,4 @@
-import Card from "./task.js";
+import Card from "../task.js";
 
 test("Task Constructor",() =>{
     const task=new Card("1","Testing with Jest", "unit testing with Jest","Saba Saeed","30-05-2021","in progress");
