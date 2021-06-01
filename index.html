@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"       crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"    crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>todolist</title>
+    </head>
+    <body> 
+      <!-- <div class="container"> -->
+      <div class="hero-image">
+        <div class="hero-text">
+          <h1>My Daily Planner</h1>
+           <span class="btngrp"> 
+            <button type="button" class="btn btn-primary" id="allTasks"> View All Tasks </button>   
+            <button type="button" class="btn btn-info btn-lg" id="addTask" data-toggle="modal" data-target="#myModal">Add New Task</button>  
+           </span> 
+        </div>
+      </div>
+      <!-- </div> -->
+    
+    <h1 class="mainHeading"></h1>
+    <div id ="main-container">
+        <div id="taskcontainer">
+            <!-- <div id ="cList" class="card"> -->
+                <!-- <h1 class="heading">Grocery</h1>
+                <p>Buy some milk and eggs</p>
+                <p>Saba</p>
+                <p>8/6/2020</p>
+                <p>to do</p>
+                <p><button class="Edit" id="ebutton"><i class="fa fa-edit"></i></button></p>
+                <p><button class="delete" id="dbutton"><i class="fa fa-trash"></i></button></p> -->
+            <!-- </div> -->
+        </div>
+    </div>
+
+
+
+<!-- Status here -->
+ <!-- <div class="btn-group">
+  <button class="btn btn-lg btn-warning dropdown-toggle" id="btnFilter" style="margin-left: 15px; margin-bottom: 20px; 
+  border-radius: 5px; background-color:rgb(159, 133, 159); color: white ; display: flex; border-color: #f0f0f5;"
+  data-toggle="dropdown">Filter</button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" id = "toDo" href="#">To Do</a>
+    <a class="dropdown-item" id = "inProgress" href="#">In Progress</a>
+    <a class="dropdown-item" id = "review" href="#">Review</a>
+    <a class="dropdown-item" id = "done" href="#">Done</a>
+  </div>
+</div>  -->
+
+
+  
+
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Add Tasks</h4>
+        <button type="button" class="close" id ="aBtn" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+        <div class="form-group">
+        <!-- <span id="demo"></span> -->
+        <label for="inputname">Task Name</label>
+        <input type="text" class="form-control" placeholder="Enter Task Name" id="text1">
+        <span id="nmErrMsg"></span>
+        </div>
+
+        <div class="form-group">
+        <label for="InputDetails">Description</label>
+            <textarea class="form-control" rows="2" id="des"></textarea>
+        <span id="nmErrMsg1"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="inputname">Assignee</label>
+          <input type="text" class="form-control" id="assignee"></input>
+          <span id="nmErrMsg2"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="inputname">Due Date</label>
+          <input type="date" class="form-control" id ="dDate">
+          <span id="nmErrMsg3"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="status">Status</label>
+          <div class="options">
+              <select id="sTatus" name="status">
+                      <option value="Pick an option">Please Choose</option>
+                      <option value="To Do">To Do</option>
+                      <option value="Review">Review</option>
+                      <option value="In progress">In progress</option>
+                      <option value="Done">Done</option>
+              </select> 
+              <span id="nmErrMsg4"></span>
+            </div>
+          </div>
+        
+        
+        </form>
+      
+
+        <div class="modal-footer">
+            <input type="button" class="btn btn-primary" id="addButton" value="Save"></input>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+        </div>
+        </div>
+        </div> 
+</div>       
+<!--Edit  Modal -->
+<div id="ediTModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+  <!-- Modal content-->
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Update Tasks</h4>
+      <button type="button" class="close" id ="eBtn" data-dismiss="modal">&times;</button>
+    </div>
+    <!-- Modal body -->
+    <div class="modal-body">
+      <form>
+        <div class="form-group"> 
+        <label for="inputId"></label>
+        <input type="hidden" id="tId"></input>
+        <span id="nmErrMsg"></span>
+        </div>
+      <div class="form-group">
+      <!-- <span id="demo"></span> -->
+      <label for="inputname">Task Name</label>
+      <input type="text" id="ename"></input>
+      <span id="nmErrMsg"></span>
+      </div>
+
+      <div class="form-group">
+      <label for="InputDetails">Description</label>
+      <input type="text" class="form-control" id="edes" rows=6></input>
+      <span id="nmErrMsg1"></span>
+      </div>
+
+      <div class="form-group">
+        <label for="inputname">Assignee</label>
+        <input type="text" class="form-control" id="eAssignee"></input>
+        <span id="nmErrMsg"></span>
+        </div>
+
+        <div class="form-group">
+        <label for="inputname">Due Date</label>
+        <input type="date" class="form-control" id="edDate"></input>
+        <span id="nmErrMsg"></span>
+        </div> 
+
+      <div class="form-group">
+        <label for="estatus">Status</label>
+        <div class="options">
+            <select id="esTatus" name="estatus">
+                    <option value="Pick an option">Please Choose</option>
+                    <option value="To Do">To-do</option>
+                    <option value="Review">Review</option>
+                    <option value="In progress">In progress</option>
+                    <option value="Done">Done</option>
+            </select> 
+            <span id="nmErrMsg4"></span>
+          </div>
+        </div>
+
+    </form>
+    </div>
+    <div class="modal-footer">
+      <input type="button" class="btn btn-primary" id="upDateButton" value="Update"></input>
+      <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    </div>
+    </div>
+  </div>
+  </div>
+
+ <div class="footer-div">
+  <footer>
+    <div class="copyRight">
+    <p><span>© Copyright 2020</span> Saba Akhtar </p>
+    </div>
+  </footer>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="taskplanner.js"></script>
+        
+</body>
+</html>
