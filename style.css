@@ -93,7 +93,7 @@ html {
   align-content: center;
 }
 #addTask {
-  margin-top: 60px;
+  margin-top: 30px;
   /* margin-right: 200px; */
   border-radius: 16px;
   color: rgb(43, 41, 41);
@@ -113,15 +113,13 @@ html {
 }
 
 #allTasks {
-  margin-top: 60px;
-  /* margin-left: 100px; */
+  margin-top: 30px;
   border-radius: 16px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #e1ad01;
   border: white solid 3px;
   width: 150px;
   height: 35px;
-  /* padding:10px 20px; */
   font-size: 14px;
 }
 
