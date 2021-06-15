@@ -116,11 +116,11 @@
 #### Objective 
 - Implement as many unit tests as possible in order to verify the correct behavior of the different functionality of your Task Planner.
 #### Unit testing for the Task Manager component
-1. Has a unit test for each of the functions on the TaskManager class:
-2. Add
-3. Delete
-4. Update
-5. Assign To"
+- Has a unit test for each of the functions on the TaskManager class:
+1. Add
+2. Delete
+3. Update
+4. Assign To"
 - Has a test function for the UI functions to verify that adding a task is included in the HTML list component group.
 - Has a test function for the UI functions to verify that removing a task is deleted from the HTML list component group.
 
