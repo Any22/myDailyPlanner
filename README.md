@@ -1,6 +1,16 @@
-## myDailyPlanner
-- A task planning web application which can maintain the record of your current and future tasks.
-
+### My Daily Planner
+### Introduction
+- A task planning web application which helps you in maintaining your schedule by keeping the record of your to do, in progress,review and completed tasks.
+## Build with 
+### HTML5
+### CSS3
+### Javascript
+### Jquery
+## Test 
+- Unit testing is done with Jest. 
+## Developement Methodology 
+### Agile 
+-There were 3 sprints and 10 tasks.
 ### Sprint 1
 #### Sprint 1 - Task 1: Design you App Wireframes
 #### Sprint 1 - Task 2: Implement your Wireframes using Bootstrap
