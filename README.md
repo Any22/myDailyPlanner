@@ -97,7 +97,7 @@
 - The task id finds the task that the user wants to delete.
 
 ## Sprint 3
-#### Task 8
+#### Task#8
 #### Objective 
 - Implement a JavaScript function that updates the task information into the data structure used to store the tasks in memory.
 #### Update a task
@@ -105,18 +105,18 @@
 - When the update button is clicked, both the task card and the task object inside the TaskManger class is updated.
 - When the task is updated, the button on the form should be renamed to “save” and the form fields are empty again.
 
-#### Task 9 
+#### Task#9 
 #### Objective 
 - Implement a function that allows the application to persist data using the LocalStorage API.
 #### Persisting Tasks with LocalStorage API
 - The application persists the task data, meaning that when the browser is closed and reopened, the data should remain in the page.
 - All operations to modify the data (add, delete and update) on the TaskManager class, are consistent with the data store in Local Storage.
 
-#### Task 10
+#### Task#10
 #### Objective 
 - Implement as many unit tests as possible in order to verify the correct behavior of the different functionality of your Task Planner.
 #### Unit testing for the Task Manager component
-- Has a unit test for each of the functions on the TaskManager class:
+* Has a unit test for each of the functions on the TaskManager class:
 - Add
 - Delete
 - Update
