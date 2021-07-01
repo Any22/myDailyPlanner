@@ -35,23 +35,23 @@
 ## Test 
 - Unit testing is done with Jest.
 - Commands
-- commands to start testing on Task Planner
-npm init 
-npm i --save-dev parcel-bundler 
-Add in package.json 
+commands to start testing on Task Planner
+- npm init 
+- npm i --save-dev parcel-bundler 
+- Add in package.json 
 "start": “parcel index.html”
 On the terminal to start parcel bundler
-npm start
+- npm start
 Open the link on the browser (cmd + click OR cntrl + click)
-Download jest
+- Download jest
 https://ryankubik.com/blog/parcel-and-jest/
-npm i --save-dev jest babel-jest @babel/core @babel/preset-env
-Create  .babelrc 
+- npm i --save-dev jest babel-jest @babel/core @babel/preset-env
+- Create  .babelrc 
 And paste
 {
  "presets": ["@babel/preset-env"]
 }
-Change scripts test to jest in package.json
+- Change scripts test to jest in package.json
  
 
 ## Developement Methodology 
