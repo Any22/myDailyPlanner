@@ -1,6 +1,6 @@
 ## My Daily Planner
 ### Introduction
-- A task planning web application which helps you in maintaining your schedule by keeping the record of your to do, in progress,review and completed tasks.
+- A simple web application to help in organizing the daily routine tasks by maintaining the important "To-do", "In progress", "Review" and "Done" tasks and keep it save
 
 ### Build with:
 
@@ -34,25 +34,6 @@
 
 ## Test 
 - Unit testing is done with Jest.
-- Commands
-commands to start testing on Task Planner
-- npm init 
-- npm i --save-dev parcel-bundler 
-- Add in package.json 
-"start": “parcel index.html”
-On the terminal to start parcel bundler
-- npm start
-Open the link on the browser (cmd + click OR cntrl + click)
-- Download jest
-https://ryankubik.com/blog/parcel-and-jest/
-- npm i --save-dev jest babel-jest @babel/core @babel/preset-env
-- Create  .babelrc 
-And paste
-{
- "presets": ["@babel/preset-env"]
-}
-- Change scripts test to jest in package.json
- 
 
 ## Developement Methodology 
 ### Agile 
