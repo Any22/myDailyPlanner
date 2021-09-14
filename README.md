@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/649fff45-88d1-4ce6-82bf-6134aaed1645/deploy-status)](https://app.netlify.com/sites/daily-planning-buddy/deploys)
+
 ## My Daily Planner
 ### Introduction
 - A simple web application to help in organizing the daily routine tasks by maintaining the important "To-do", "In progress", "Review" and "Done" tasks and keep it save
